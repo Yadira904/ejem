@@ -1,0 +1,14 @@
+const express = require('express');
+const confi = require('./confi');
+
+const AGENTS = require('./modulos/CUSTOMER/rutas');
+
+const app = express();
+
+//configuración
+app.set('port', confi.app.port);
+
+//rutas
+app.use('/api/CUSTOMER', CUSTOMER);
+
+module.exports = app;
